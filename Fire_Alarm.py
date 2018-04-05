@@ -2,10 +2,10 @@ import RPi.GPIO as GPIO
 from twilio.rest import Client
 
 # my Account SID 
-account_sid = "AC1ec8f6ee79f7cf15039ba0dd5889dcd2"
+account_sid = "?????????????"
 
 # my Auth Token 
-auth_token  = "55e423b99ad1ff424de88d7c81b695c1"
+auth_token  = "?????????????????"
 
 #set up client api
 client = Client(account_sid, auth_token)
