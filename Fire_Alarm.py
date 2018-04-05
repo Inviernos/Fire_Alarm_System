@@ -25,7 +25,8 @@ messageState = 1
 GPIO.setup(FLAME_PIN ,GPIO.IN)
 GPIO.setup(BUZZER_PIN, GPIO.OUT, initial= GPIO.LOW)
    
-  
+PHONE_NUM = "999-999-9999"
+TWILLIO_PHONE_NUM = "888-888-8888"
 try:
     while True:
 
@@ -36,8 +37,8 @@ try:
 
                 #send text message to user
                 message = client.messages.create(
-                    to="+13176004941", 
-                    from_="+13177942501",
+                    to=PHONE_NUM, 
+                    from_=TWILLIO_PHONE_NUM,
                     body="There is a fire in your home! Call 911")
 
                 #change state
@@ -55,8 +56,8 @@ try:
 
                 #send message to user
                 message = client.messages.create(
-                    to="+13176004941", 
-                    from_="+13177942501",
+                    to=PHONE_NUM, 
+                    from_=TWILLIO_PHONE_NUM,
                     body="The Fire Has Been Put Out!")
 
                 #change state
